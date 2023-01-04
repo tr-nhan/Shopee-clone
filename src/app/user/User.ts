@@ -1,4 +1,4 @@
-import {CreationOptional, DataTypes, InferAttributes, InferCreationAttributes, Model} from "sequelize";
+import {DataTypes, InferAttributes, InferCreationAttributes, Model} from "sequelize";
 import sequelize from "../helpers/database.config.js";
 
 const db = sequelize();
