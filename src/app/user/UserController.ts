@@ -8,7 +8,7 @@ class UserController{
         this.repo = new UserRepository();
     }
     public async index(req: Request, res: Response){
-        let result = await User.findAll();
+        let result = await this.repo.findAll();
         return res.status(200).send(result);
     }
 }
