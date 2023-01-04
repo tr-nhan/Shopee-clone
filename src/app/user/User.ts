@@ -6,6 +6,7 @@ const db = sequelize();
 export default class User extends Model<InferAttributes<User>, InferCreationAttributes<User>> {
     declare USERNAME: string;
     declare PASSWORD: string;
+    declare STATUS: string;
 }
 User.init({
     USERNAME: {
@@ -15,5 +16,12 @@ User.init({
     PASSWORD: {
         type: DataTypes.STRING(199),
         allowNull: false,
+    },
+    STATUS: {
+        type: DataTypes.TEXT,
+        validate:{
+            isIn: [["activate", "deactive"]]
+        },
+        defaultValue: "activate"
     }
 }, {sequelize: db, tableName: "USERS", timestamps: false});

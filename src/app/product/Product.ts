@@ -7,21 +7,28 @@ export default class Product extends Model<InferAttributes<Product>, InferCreati
     declare NAME: string;
     declare DESCRIPTION: string | null;
     declare IMAGE: string | null;
+    declare PRICE: number;
     declare AMOUNT_LEFT: number;
 }
 Product.init({
     P_ID:{
         type: DataTypes.INTEGER,
         primaryKey: true,
+        autoIncrement: true
     },
     NAME:{
         type: DataTypes.STRING(99),
+        allowNull: false,
     },
     DESCRIPTION:{
         type: DataTypes.TEXT
     },
     IMAGE:{
         type: DataTypes.TEXT
+    },
+    PRICE:{
+        type: DataTypes.REAL,
+        defaultValue: 0
     },
     AMOUNT_LEFT:{
         type: DataTypes.INTEGER,

@@ -1,6 +1,5 @@
 import UserRepository from "./UserRepository.js";
 import {Request, Response} from "express";
-import User from "./User.js";
 
 class UserController{
     private repo: UserRepository;

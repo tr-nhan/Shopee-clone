@@ -4,9 +4,8 @@ import path, {dirname} from "path";
 import {fileURLToPath} from "url";
 import * as dotenv from "dotenv";
 import Router from "./helpers/Router.js";
-import connect from "./helpers/database.config.js";
 
-//dotenv config
+//import .env file
 dotenv.config();
 
 // define necessary constant
@@ -27,7 +26,11 @@ nodeApplication.use(express.urlencoded({extended: true}));
 nodeApplication.use(express.json());
 
 // Request logger
-nodeApplication.use(morgan("common"));
+morgan.token("date", (req, res, next)=>{
+    return (new Date()).toLocaleString();
+});
+nodeApplication.use(morgan(':remote-addr - :remote-user [:date[clf]] ' +
+    '":method :url HTTP/:http-version" :status :res[content-length]'));
 
 // Routing
 const router = new Router(nodeApplication);
@@ -35,5 +38,5 @@ router.route();
 
 // Initialize server
 nodeApplication.listen(PORT, () => {
-    console.log("Server is live on port", PORT);
+    console.log("Node application starts on port", PORT);
 })
