@@ -5,7 +5,7 @@
   "entrypoint": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon watch ./src/**/* -e ts,ejs,css -exec \"npm run build\" && \"npm start\"",
+    "dev": "nodemon watch ./src -e ts,ejs,css --exec \"npm run build && npm start\"",
     "clean": "npx rimraf ./dist",
     "build": "npm run clean && tsc",
     "start": "node ./dist/index.js"
@@ -31,6 +31,7 @@
     "@types/morgan": "^1.9.4",
     "@types/node": "^18.11.18",
     "nodemon": "^2.0.20",
+    "prettier": "^2.8.1",
     "rimraf": "^3.0.2",
     "typescript": "^4.9.4"
   }

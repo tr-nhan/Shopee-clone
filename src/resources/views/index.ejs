@@ -11,7 +11,22 @@
     <link rel="icon" href="img/placeholder.png">
 </head>
 <body>
-<div class="bootstrap-navbar"><%- include('components/navbar') %></div>
-<h1><b>Welcome to NodeJS</b></h1>
+<header>
+
+    <div class="bootstrap-navbar"><%- include('components/navbar') %></div>
+
+</header>
+
+<div class="app">
+    <% var pages %>
+    <% if ( pages !== undefined) { %>
+        <%- include(pages) %>
+    <% } %>
+</div>
+
+<footer>
+
+
+</footer>
 </body>
 </html>

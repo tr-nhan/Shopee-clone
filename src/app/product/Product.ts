@@ -2,36 +2,41 @@ import {DataTypes, InferAttributes, InferCreationAttributes, Model} from "sequel
 import sequelize from "../helpers/database.config.js";
 
 const db = sequelize();
-export default class Product extends Model<InferAttributes<Product>, InferCreationAttributes<Product>>{
+export default class Product extends Model<InferAttributes<Product>, InferCreationAttributes<Product>> {
     declare P_ID: number;
     declare NAME: string;
     declare DESCRIPTION: string | null;
     declare IMAGE: string | null;
     declare PRICE: number;
     declare AMOUNT_LEFT: number;
+    declare TAG: string;
 }
 Product.init({
-    P_ID:{
+    P_ID: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
-    NAME:{
+    NAME: {
         type: DataTypes.STRING(99),
         allowNull: false,
     },
-    DESCRIPTION:{
+    DESCRIPTION: {
         type: DataTypes.TEXT
     },
-    IMAGE:{
+    IMAGE: {
         type: DataTypes.TEXT
     },
-    PRICE:{
+    PRICE: {
         type: DataTypes.REAL,
         defaultValue: 0
     },
-    AMOUNT_LEFT:{
+    AMOUNT_LEFT: {
         type: DataTypes.INTEGER,
         defaultValue: 0
+    },
+    TAG: {
+        type: DataTypes.STRING(99),
+        defaultValue: "others",
     }
 }, {sequelize: db, tableName: "PRODUCTS", timestamps: false})

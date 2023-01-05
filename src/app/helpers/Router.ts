@@ -4,6 +4,7 @@ import UserController from "../user/UserController.js";
 
 export default class Router {
     private app: Application;
+
     public constructor(app: Application) {
         this.app = app;
     }

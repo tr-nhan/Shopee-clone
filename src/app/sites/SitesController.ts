@@ -1,16 +1,16 @@
-import express, {Request, Response} from "express";
+import {Request, Response} from "express";
 
 class SitesController {
     public homepage(req: Request, res: Response) {
-        return res.status(200).render("index");
+        return res.status(200).render("index", {pages: "components/header"});
     }
 
     public search(req: Request, res: Response) {
-
+        return res.status(200).render("index", {pages: "components/searchform"});
     }
 
     public invalidRequest(req: Request, res: Response) {
-        res.status(404).render("error");
+        return res.status(404).render("error");
     }
 }
 
