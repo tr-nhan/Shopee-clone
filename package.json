@@ -5,7 +5,7 @@
   "entrypoint": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon watch ./src -e ts,ejs,css --exec \"npm run build && npm start\"",
+    "dev": "nodemon watch ./src -e ts --exec \"npm run build && npm start\"",
     "clean": "npx rimraf ./dist",
     "build": "npm run clean && tsc",
     "start": "node ./dist/index.js"
