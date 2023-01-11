@@ -26,7 +26,7 @@ nodeApplication.use(express.urlencoded({extended: true}));
 nodeApplication.use(express.json());
 
 // Request logger
-morgan.token("date", (req, res, next)=>{
+morgan.token("date", (req, res, next) => {
     return (new Date()).toLocaleString();
 });
 nodeApplication.use(morgan(':remote-addr - :remote-user [:date[clf]] ' +
