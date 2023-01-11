@@ -18,7 +18,7 @@ Product.init({
         autoIncrement: true
     },
     NAME: {
-        type: DataTypes.STRING(99),
+        type: DataTypes.STRING(59),
         allowNull: false,
     },
     DESCRIPTION: {
