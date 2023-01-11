@@ -40,10 +40,10 @@ export default class UserRepository implements IRepository<User> {
     public async update(id: string, item: User): Promise<boolean> {
         try {
             let oldEntity = await User.findByPk(id);
-            if(oldEntity == null){
+            if (oldEntity == null) {
                 return false;
             }
-            oldEntity?.update(item.get({plain : true}));
+            oldEntity?.update(item.get({plain: true}));
             await oldEntity?.save();
             return true;
         } catch (err) {
