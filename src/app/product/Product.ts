@@ -19,7 +19,6 @@ Product.init({
     },
     NAME: {
         type: DataTypes.STRING(59),
-        allowNull: false,
     },
     DESCRIPTION: {
         type: DataTypes.TEXT
