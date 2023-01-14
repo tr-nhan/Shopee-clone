@@ -2,21 +2,15 @@ import {Request, Response} from "express";
 
 class SitesController {
     public homepage(req: Request, res: Response) {
-        return res.status(200).render("index", {
-            titles: "Trang Chủ",
-            pages: "components/header"
-        });
+        return res.status(200).render("index");
     }
 
     public search(req: Request, res: Response) {
-        return res.status(200).render("index", {
-            titles: "Tìm Kiếm",
-            pages: "components/searchform"
-        });
+        return res.status(200).render("index");
     }
 
     public invalidRequest(req: Request, res: Response) {
-        return res.status(404).render("error");
+        return res.status(404).send("error");
     }
 }
 

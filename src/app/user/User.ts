@@ -18,7 +18,6 @@ User.init({
         },
         PASSWORD: {
             type: DataTypes.STRING(199),
-            allowNull: false,
         },
         ADMIN_RIGHTS: {
             type: DataTypes.INTEGER,
