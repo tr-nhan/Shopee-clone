@@ -1,9 +1,9 @@
-import express, {Request, Response} from "express";
+import express from "express";
 import morgan from "morgan";
 import path, {dirname} from "path";
 import {fileURLToPath} from "url";
 import * as dotenv from "dotenv";
-import Router from "./helpers/Router.js";
+import PathRouter from "./helpers/PathRouter.js";
 
 //import .env file
 dotenv.config();
@@ -33,7 +33,7 @@ nodeApplication.use(morgan(':remote-addr - :remote-user [:date[clf]] ' +
     '":method :url HTTP/:http-version" :status :res[content-length]'));
 
 // Routing
-const router = new Router(nodeApplication);
+const router = new PathRouter(nodeApplication);
 router.route();
 
 // Initialize server
