@@ -1,7 +1,7 @@
 import {DataTypes, InferAttributes, InferCreationAttributes, Model} from "sequelize";
-import sequelize from "../helpers/database.config.js";
+import DatabaseConfig from "../helpers/DatabaseConfig.js";
 
-const db = sequelize();
+const db = DatabaseConfig.getInstance();
 export default class Product extends Model<InferAttributes<Product>, InferCreationAttributes<Product>> {
     declare P_ID: number;
     declare NAME: string;
