@@ -152,4 +152,5 @@ dist
 .pnp.*
 
 # test
-./test
+test
+jest.config.js

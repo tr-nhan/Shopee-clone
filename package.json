@@ -23,6 +23,7 @@
     "sqlite3": "^5.1.4"
   },
   "devDependencies": {
+    "@jest/globals": "^29.4.3",
     "@types/cookie-parser": "^1.4.3",
     "@types/cors": "^2.8.13",
     "@types/debug": "^4.1.7",
@@ -35,6 +36,7 @@
     "nodemon": "^2.0.20",
     "prettier": "^2.8.1",
     "rimraf": "^3.0.2",
+    "ts-jest": "^29.0.5",
     "typescript": "^4.9.4"
   }
 }
