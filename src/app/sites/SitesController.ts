@@ -22,11 +22,18 @@ class SitesController {
     }
 
     public signin(req: Request, res: Response) {
-        return res.status(200).render("index", {title: "Đăng Nhập", page: "partials/loginform"});
+        return res.status(200).render("index",
+            {
+                title: "Đăng Nhập",
+                page: "partials/loginform"
+            });
     }
 
     public signup(req: Request, res: Response) {
-        return res.status(200).render("index", {title: "Đăng ký", page: "partials/registryform"});
+        return res.status(200).render("index", {
+            title: "Đăng ký",
+            page: "partials/registryform"
+        });
     }
 
     public requestMapping(): Router {
