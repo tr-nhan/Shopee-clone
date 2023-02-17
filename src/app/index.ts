@@ -12,7 +12,7 @@ dotenv.config();
 const nodeApplication = express();
 const PORT = process.env.PORT || 3000;
 const __dirname = dirname(fileURLToPath(import.meta.url));
-
+nodeApplication.set('etag', false);
 
 // Setting public directory
 nodeApplication.use(express.static(path.join(__dirname, "../src/resources/public")));

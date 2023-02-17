@@ -1,6 +1,6 @@
 import {Application} from "express";
 import SitesController from "../sites/SitesController.js";
-import UserController from "../user/UserController.js";
+
 
 export default class PathRouter {
     private app: Application;
@@ -9,8 +9,7 @@ export default class PathRouter {
         this.app = app;
     }
 
-    public route() {
-        this.app.use("/api/test", (req, res) => UserController.index(req, res));
-        this.app.use("*", SitesController.getAPI())
+    public route(): void {
+        this.app.use("/", SitesController.requestMapping());
     }
 }
