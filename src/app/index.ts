@@ -5,14 +5,15 @@ import {fileURLToPath} from "url";
 import * as dotenv from "dotenv";
 import PathRouter from "./helpers/PathRouter.js";
 
-//import .env file
-dotenv.config();
 
 // define necessary constant
 const nodeApplication = express();
 const PORT = process.env.PORT || 3000;
 const __dirname = dirname(fileURLToPath(import.meta.url));
 nodeApplication.set('etag', false);
+
+//import .env file
+dotenv.config({path: path.join(__dirname, "../src/resources/.env")});
 
 // Setting public directory
 nodeApplication.use(express.static(path.join(__dirname, "../src/resources/public")));

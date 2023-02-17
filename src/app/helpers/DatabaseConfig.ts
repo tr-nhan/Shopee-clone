@@ -1,7 +1,6 @@
 import {Sequelize} from "sequelize";
-import * as dotenv from "dotenv"
 
-dotenv.config();
+
 export default class DatabaseConfig {
     public static getInstance(): Sequelize {
         return new Sequelize({
