@@ -11,16 +11,44 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/brands.css">
-    <link rel="icon" href="img/shopee.png">
+    <link rel="icon" href="img/shopee.svg">
 </head>
 <body>
 <div class="app">
     <header>
         <%- include('partials/navbar') %>
+        <div class="header-with-search">
+            <div class="header__logo" onclick="location.href = '/';">
+                <%- include('partials/svg-logo') %>
+            </div>
+            <div class="header__search">
+                <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm">
+                <div class="header__search-select">
+                    <span class="header__search-select-label">Danh mục</span>
+                    <i class="header__search-select-icon fa-solid fa-chevron-down"></i>
+                    <ul class="header__search-option">
+                        <li class="header__search-option-item"><span>Dép</span></li>
+                        <li class="header__search-option-item"><span>Áo khoác</span></li>
+                        <li class="header__search-option-item"><span>Áo thun</span></li>
+                        <li class="header__search-option-item"><span>Túi xách</span></li>
+                        <li class="header__search-option-item"><span>Ốp lưng</span></li>
+                        <li class="header__search-option-item"><span>Balo</span></li>
+                        <li class="header__search-option-item"><span>Tai nghe bluetooh</span></li>
+                        <li class="header__search-option-item"><span>LEGO</span></li>
+                    </ul>
+                </div>
+                <button class="header__search-btn">
+                    <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="header__cart">
+                <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+            </div>
+        </div>
     </header>
     <%- include('partials/loginform') %>
     <%- include('partials/registryform') %>
-    <script src="javascript/modal.js"></script>
+    <script src="javascript/modalBehavior.js"></script>
     <footer>
         <% var page; %>
         <% if(page !== undefined){ %>

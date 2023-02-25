@@ -10,7 +10,6 @@ import PathRouter from "./helpers/PathRouter.js";
 const nodeApplication = express();
 const PORT = process.env.PORT || 3000;
 const __dirname = dirname(fileURLToPath(import.meta.url));
-nodeApplication.set('etag', false);
 
 //import .env file
 dotenv.config({path: path.join(__dirname, "../src/resources/.env")});

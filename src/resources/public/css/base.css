@@ -3,8 +3,14 @@
   --black-color: black;
   --gray-color: gray;
   --text-color: #333;
-  --primary-color: #f63e2e;
+  --primary-color: rgb(251, 85, 51);
   --border-color: #dbdbdb;
+
+  --header-height: 113px;
+  --navbar-height: 20px;
+  --header-with-search-height: calc(
+    var(--header-height) - var(--navbar-height)
+  );
 }
 
 @font-face {
