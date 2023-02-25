@@ -70,6 +70,15 @@ html {
   }
 }
 
+@keyframes growUp {
+  from {
+    transform: scale(var(--grow-from));
+  }
+  to {
+    transform: scale(var(--grow-to));
+  }
+}
+
 .btn {
   min-width: 142px;
   height: 34px;

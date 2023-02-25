@@ -1,15 +1,16 @@
-<div class="modal">
-    <div class="modal__overlay"><a href="/"></a></div>
+<div class="modal modal--registry" style="display: none">
+    <div class="modal__overlay modal__overlay--registry">
+    </div>
     <div class="modal__body">
         <div class="auth-form">
             <div class="auth-form__container">
                 <div class="auth-form__header">
                     <h3 class="auth-form__heading">Đăng ký</h3>
-                    <button onclick="location.href='/signin'" class="auth-form__switch-btn">Đăng Nhập</button>
+                    <button onclick="showLoginForm()" class="auth-form__switch-btn">Đăng Nhập</button>
                 </div>
                 <div class="auth-form__form">
                     <div class="auth-form__group">
-                        <input type="text" class="auth-form__input" placeholder="Nhập username của bạn">
+                        <input type="text" class="auth-form__input" placeholder="Nhập tên đăng nhập của bạn">
                     </div>
                     <div class="auth-form__group">
                         <input type="text" class="auth-form__input" placeholder="Nhập email của bạn">
@@ -18,7 +19,7 @@
                         <input type="password" class="auth-form__input" placeholder="Nhập mật khẩu của bạn">
                     </div>
                     <div class="auth-form__group">
-                        <input type="password" class="auth-form__input" placeholder="Xác nhận mật khẩu">
+                        <input type="password" class="auth-form__input" placeholder="Xác nhận lại mật khẩu">
                     </div>
                 </div>
                 <div class="auth-form__aside">
@@ -31,10 +32,10 @@
                     </p>
                 </div>
                 <div class="auth-form__controls">
-                    <button onclick="location.href='/'" class="btn btn--normal auth-form__controls-back">
+                    <button onclick="hideForm()" class="btn btn--normal auth-form__controls-back">
                         TRỞ LẠI
                     </button>
-                    <button class="btn btn--primary">
+                    <button onclick="" class="btn btn--primary">
                         ĐĂNG KÝ
                     </button>
                 </div>

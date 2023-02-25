@@ -24,11 +24,6 @@ header {
   margin: 0 8px;
 }
 
-.link {
-  display: inline-flex;
-  align-items: center;
-}
-
 .link--login,
 .link--registry {
   text-decoration: none;
@@ -146,7 +141,6 @@ header {
   top: 115%;
   background-color: var(--white-color);
   transform-origin: calc(100% - 20px) top;
-  animation: notificationGrow ease-in 0.2s;
   will-change: opacity, transform;
   display: none;
 }
@@ -173,6 +167,7 @@ header {
 
 .navbar-list__item--show-noti:hover .notify {
   display: block;
+  animation: notificationGrow ease-in 0.2s;
 }
 
 .notify__header {
@@ -258,7 +253,7 @@ header {
   left: 0;
   bottom: 0;
   right: 0;
-  display: flex;
+  animation: showUp linear 0.1s;
 }
 
 .modal__overlay {
@@ -269,11 +264,14 @@ header {
 }
 
 .modal__body {
+  --grow-from: 0.7;
+  --grow-to: 1;
   margin: auto;
   background-color: var(--white-color);
   position: relative;
   z-index: 1;
   border-radius: 4px;
+  animation: growUp linear 0.1s;
 }
 
 .auth-form {

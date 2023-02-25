@@ -40,4 +40,4 @@ router.route();
 // Initialize server
 nodeApplication.listen(PORT, () => {
     console.log("Node application starts on port", PORT);
-})
+});

@@ -11,18 +11,21 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/brands.css">
+    <link rel="icon" href="img/shopee.png">
 </head>
 <body>
 <div class="app">
     <header>
         <%- include('partials/navbar') %>
     </header>
-    <% var page; %>
-    <% if(page !== undefined) { %>
-        <%- include(page) %>
-    <% } %>
+    <%- include('partials/loginform') %>
+    <%- include('partials/registryform') %>
+    <script src="javascript/modal.js"></script>
     <footer>
-
+        <% var page; %>
+        <% if(page !== undefined){ %>
+            <%- include(page.toString()) %>
+        <% } %>
     </footer>
 </div>
 </body>
