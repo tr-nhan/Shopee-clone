@@ -22,9 +22,24 @@
                 <%- include('partials/svg-logo') %>
             </div>
             <div class="header__search">
-                <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm">
+
+                <div class="header__search-input-wrap">
+                    <label style="flex: 1; height: 100%">
+                        <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm">
+                    </label>
+                    <div class="header__search-history">
+                        <h3 class="header__search-history-heading">
+                            Lịch sử tìm kiếm
+                        </h3>
+                        <ul class="header__search-history-list">
+                            <li class="header__search-history-item"><a href="">phone</a></li>
+                            <li class="header__search-history-item"><a href="">balo</a></li>
+                            <li class="header__search-history-item"><a href="">túi xách</a></li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="header__search-select">
-                    <span class="header__search-select-label">Danh mục</span>
+                    <span class="header__search-select-label">Gợi ý</span>
                     <i class="header__search-select-icon fa-solid fa-chevron-down"></i>
                     <ul class="header__search-option">
                         <li class="header__search-option-item"><span>Dép</span></li>
@@ -37,6 +52,7 @@
                         <li class="header__search-option-item"><span>LEGO</span></li>
                     </ul>
                 </div>
+                <script src="javascript/searchBehavior.js"></script>
                 <button class="header__search-btn">
                     <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
                 </button>

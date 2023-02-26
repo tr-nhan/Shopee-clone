@@ -6,12 +6,12 @@ import * as dotenv from "dotenv";
 import PathRouter from "./helpers/PathRouter.js";
 
 
-// define necessary constant
+// Define necessary constant
 const nodeApplication = express();
 const PORT = process.env.PORT || 3000;
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-//import .env file
+// Import .env file
 dotenv.config({path: path.join(__dirname, "../src/resources/.env")});
 
 // Setting public directory
