@@ -5,7 +5,7 @@ export default class DatabaseConfig {
   public static getInstance(): Sequelize {
     dotenv.config();
     if (process.env.DB_SOURCE == undefined) {
-      throw new Error("Could not load the database source!");
+      throw new Error("Could not load the database source from .env file!");
     }
     return new Sequelize({
       dialect: "sqlite",

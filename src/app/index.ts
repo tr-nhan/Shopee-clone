@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000;
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Import .env file
-console.log(dotenv.config({ path: "./.env" }));
+console.log(dotenv.config().parsed);
 
 // Setting public directory
 nodeApplication.use(express.static(path.join(__dirname, "../src/resources/public")));
