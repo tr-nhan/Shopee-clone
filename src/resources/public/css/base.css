@@ -1,5 +1,5 @@
 :root {
-  --white-color: white;
+  --white-color: #ffffff;
   --black-color: black;
   --gray-color: gray;
   --text-color: #333;
@@ -9,7 +9,7 @@
   --header-height: 113px;
   --navbar-height: 20px;
   --header-with-search-height: calc(
-    var(--header-height) - var(--navbar-height)
+          var(--header-height) - var(--navbar-height)
   );
 }
 
