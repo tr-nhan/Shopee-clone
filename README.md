@@ -13,3 +13,4 @@ your own when using this project in commercial uses.
 # Introduction
 
 Version: 0.1.0 alpha
+Language: vietnamese (tiếng Việt)
