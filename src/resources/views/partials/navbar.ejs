@@ -23,7 +23,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="navbar-list">
+        <ul class="navbar-list navbar-list__console">
             <li class="navbar-list__item navbar-list__item--show-noti">
                 <a class="link"><i class="icon fa-regular fa-bell"></i>Thông Báo</a>
                 <div class="notify">
@@ -85,11 +85,38 @@
             <li class="navbar-list__item">
                 <a class="link"><i class="icon fa-regular fa-circle-question"></i>Hỗ Trợ</a>
             </li>
-            <li class="navbar-list__item navbar-list__item--bold navbar-list__item--line">
-                <p class="link link--registry" onclick="showRegistryForm()">Đăng Ký</p>
-            </li>
-            <li class="navbar-list__item navbar-list__item--bold">
-                <p class="link link--login" onclick="showLoginForm()">Đăng Nhập</p>
+            <!--                        <li class="navbar-list__item navbar-list__item&#45;&#45;bold navbar-list__item&#45;&#45;line">-->
+            <!--                            <p class="link link&#45;&#45;registry" onclick="showRegistryForm()">Đăng Ký</p>-->
+            <!--                        </li>-->
+            <!--                        <li class="navbar-list__item navbar-list__item&#45;&#45;bold">-->
+            <!--                            <p class="link link&#45;&#45;login" onclick="showLoginForm()">Đăng Nhập</p>-->
+            <!--                        </li>-->
+            <li class="navbar-list__item navbar-list__item-user">
+                <a href="/" class="link user">
+                    <img class="user__img"
+                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Eo_circle_yellow_letter-t.svg/1024px-Eo_circle_yellow_letter-t.svg.png"
+                         alt="avatar-icon">
+                    <span class="user__name">
+                    Super Moderator
+                </span>
+                </a>
+                <ul class="user__menu">
+                    <li class="user__item">
+                        <a href="">Tài Khoản Của Tôi</a>
+                    </li>
+                    <li class="user__item">
+                        <a href="">Đơn Mua</a>
+                    </li>
+                    <li class="user__item">
+                        <a href="">Cửa Hàng Của Tôi</a>
+                    </li>
+                    <li class="user__item user__item--important">
+                        <a href="">Bảng Điều Kiển</a>
+                    </li>
+                    <li class="user__item">
+                        <a href="">Đăng Xuất</a>
+                    </li>
+                </ul>
             </li>
         </ul>
         <script src="javascript/form_switch.js"></script>
