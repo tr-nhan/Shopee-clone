@@ -57,7 +57,7 @@ header {
 
 .user__name {
   color: var(--white-color);
-  margin-left: 5px;
+  margin-left: 4px;
   margin-top: 5px;
   font-size: 1.4rem;
   font-weight: 400;
@@ -127,7 +127,9 @@ header {
   background-color: rgba(243, 243, 243, 0.3);
   color: orange;
 }
-
+.user__item--separator {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
 .link--login,
 .link--registry {
   text-decoration: none;
@@ -250,6 +252,8 @@ header {
   width: 404px;
   top: 115%;
   z-index: 1;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--white-color);
   transform-origin: calc(100% - 32px) top;
   will-change: opacity, transform;
