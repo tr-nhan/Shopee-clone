@@ -20,3 +20,25 @@ This is a project using Node.js platform + Express framework + TypeScript progra
 
 # Quick start
 
+First, you need to run
+
+```
+npm install
+```
+in order to download necessarry node packages
+
+
+Then, you need to compile the project from typescript into javascript. This project has a built-in command which help you to do so:
+
+```
+npm run build
+```
+
+Finally, run
+
+```
+npm start
+```
+
+and open [localhost:3000](http://localhost:3000)
+
