@@ -4,7 +4,7 @@ My pet project about building an e-commercial website based on Shopee
 
 # Disclaimer
 
-**This work is NOT an official work of or directly related to Shopee ([Sea Ltd](https://www.sea.com/home)) and I did not intend for any commerical uses. All rights of Shopee and Sea
+**This work is NOT an official work of or directly related to Shopee ([Sea Ltd](https://www.sea.com/home)) and I (the original author) did not intend for any commerical uses. All rights of Shopee and Sea
 Ltd must be reversed on their behalf**
 
 You can use this work under [MIT license](https://github.com/tr-nhan/Shopee-clone/blob/main/LICENSE) but please be aware of taking legal responsibilities by
