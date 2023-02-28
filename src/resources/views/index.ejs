@@ -7,7 +7,7 @@
     <title><%= title %></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
           integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/brands.css">
@@ -22,9 +22,47 @@
     <%- include('partials/loginform') %>
     <%- include('partials/registryform') %>
     <script src="javascript/modalBehavior.js"></script>
-    <body>
+    <div class="app">
+        <div class="header">
 
-    </body>
+        </div>
+        <div class="container">
+            <div class="grid">
+
+                <div class="grid__row">
+                    <div class="grid__column-2">
+                        <nav class="category">
+                            <h3 class="category__heading"><i class="fa-solid fa-list"></i>
+                                Danh mục</h3>
+                            <ul class="category-list">
+                                <li class="category-item category-item--active">
+                                    <a href="" class="category-item__link">
+                                        Laptop
+                                    </a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="" class="category-item__link">
+                                        Tablet
+                                    </a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="" class="category-item__link">
+                                        Điện thoại thông minh
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="grid__column-8">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+
+        </div>
+    </div>
     <footer>
         <% var page; %>
         <% if(page !== undefined){ %>
