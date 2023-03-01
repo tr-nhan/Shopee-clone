@@ -110,7 +110,7 @@ html {
     color: var(--text-color);
     background-color: rgba(0, 0, 0, 0);
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
 }
