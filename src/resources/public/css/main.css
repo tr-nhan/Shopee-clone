@@ -607,6 +607,7 @@ header {
     box-shadow: 0 2px 8px 10px rgba(204, 204, 204, 0.22);
     display: none;
     cursor: default;
+    z-index: 1;
 }
 
 .header__cart-wrap:hover .header__cart-list {
@@ -711,6 +712,7 @@ header {
     transform-origin: calc(100% - 20px) top;
     will-change: opacity, transform;
     display: none;
+    z-index: 2;
 }
 
 .header__search-select::after {
