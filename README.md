@@ -16,7 +16,7 @@ Version: 0.1.0 alpha
 
 Language: vietnamese (tiếng Việt)
 
-This is a project using Node.js platform + Express framework + TypeScript programming language as its core to build a friendly, secure, easily to maintain and upgrade e-commerical website based on the design of well known one: Shopee.
+This is a project using Node.js platform + Express framework + TypeScript programming language as its core to build a friendly, secure, easily to maintain and upgrade e-commerical website based on the design of well known one: [Shopee.vn](https://shopee.vn/)
 
 # Quick start
 
