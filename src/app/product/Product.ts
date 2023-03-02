@@ -1,5 +1,6 @@
 import {DataTypes, InferAttributes, InferCreationAttributes, Model} from "sequelize";
 import DatabaseConfig from "../helpers/DatabaseConfig.js";
+import User from "../user/User.js";
 
 const db = DatabaseConfig.getInstance();
 export default class Product extends Model<InferAttributes<Product>, InferCreationAttributes<Product>> {
@@ -10,6 +11,7 @@ export default class Product extends Model<InferAttributes<Product>, InferCreati
     declare PRICE: number;
     declare AMOUNT_LEFT: number;
     declare TAG: string;
+    declare CREATE_BY: string;
 }
 Product.init({
     P_ID: {
@@ -37,5 +39,12 @@ Product.init({
     TAG: {
         type: DataTypes.STRING(99),
         defaultValue: "others",
+    },
+    CREATE_BY: {
+        type: DataTypes.STRING(199),
+        references: {
+            model: User,
+            key: "USERNAME",
+        }
     }
 }, {sequelize: db, tableName: "PRODUCTS", timestamps: false})
