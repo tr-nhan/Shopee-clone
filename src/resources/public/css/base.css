@@ -5,6 +5,7 @@
     --text-color: #333;
     --primary-color: rgb(251, 85, 51);
     --border-color: #dbdbdb;
+    --gold-star: #ffce3d;
 
     --header-height: 113px;
     --navbar-height: 20px;
@@ -74,7 +75,11 @@ html {
     padding-right: 12px;
     width: 16.6667%;
 }
-
+.grid__column-2-4 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 20%;
+}
 .grid__column-10 {
     padding-left: 12px;
     padding-right: 12px;
