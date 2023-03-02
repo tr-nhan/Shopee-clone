@@ -57,36 +57,43 @@
 
                     </div>
                     <div class="grid__column-10">
-                        <div class="home-filter">
-                            <span class="home-filter__label">
-                                Sắp xếp theo
-                            </span>
-                            <button class="btn home-filter__btn">Phổ biến</button>
-                            <button class="btn btn--primary home-filter__btn">Mới nhất</button>
-                            <button class="btn home-filter__btn">Bán chạy</button>
-                            <div class="select-input">
-                                <span class="select-input__label">Giá</span>
-                                <i class="select-input__icon fas fa-angle-down"></i>
-                                <ul class="select-input__list">
-                                    <li class="select-input__item">
-                                        <a href="" class="select-input__link">Thấp đến cao</a>
-                                    </li>
-                                    <li class="select-input__item"><a href="" class="select-input__link">
-                                            Cao đến thấp
-                                        </a></li>
-                                </ul>
-                            </div>
-                            <div class="home-filter__page">
-                                <span class="home-filter__page-num">
-                                    <span class="home-filter__page-current">1</span>/14
-                                </span>
-                                <div class="home-filter__page-control">
-                                    <a href="" class="home-filter__page-btn home-filter__page-btn--disabled">
-                                        <i class="home-filter__page-icon fas fa-angle-left"></i>
-                                    </a>
-                                     <a href="" class="home-filter__page-btn">
-                                        <i class="home-filter__page-icon fas fa-angle-right"></i>
-                                    </a>
+                        <%- include('partials/homefilter') %>
+                        <div class="home-product">
+                            <div class="grid__row">
+                                <div class="grid__column-2">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/84b7e1a15e9bb49fcb56e4eadaccb4c4_tn)">
+                                        </div>
+                                        <h4 class="home-product-item__name">
+
+                                        </h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__old-price"></span>
+                                            <span class="home-product-item__current-price"></span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__add-to-cart"><i>Thêm vào giỏ</i></span>
+                                            <div class="home-product-item__rating">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__store">Samsung-official-store</span>
+                                            <span class="home-product-item__number">#Shop Đặc Biệt</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent"></span>
+                                            <span class="home-product-item__sale-off-label"></span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
