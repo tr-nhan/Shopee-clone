@@ -38,7 +38,7 @@ User.init({
     BAN_LIFT_TIME: {
       type: DataTypes.INTEGER,
       validate: {
-        min: -1
+        min: 0
       },
       defaultValue: 0
     },
@@ -49,7 +49,7 @@ User.init({
     sequelize: db, tableName: "USERS", timestamps: false,
     validate: {
       banTimeIsExist() {
-        if (this.BAN_RESON !== null && parseInt(this.BAN_LIFT_TIME!.toString()) !== 0) {
+        if (this.BAN_RESON !== null && parseInt(this.BAN_LIFT_TIME!.toString()) === 0) {
           throw new Error("Constraint violated! Ban time does not exist");
         }
       }
