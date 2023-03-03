@@ -38,7 +38,7 @@ User.init({
     BAN_LIFT_TIME: {
       type: DataTypes.INTEGER,
       validate: {
-        min: -1
+        min: 0
       },
       defaultValue: 0
     },
