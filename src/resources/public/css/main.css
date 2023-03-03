@@ -1018,14 +1018,26 @@ header {
 .home-filter__page-btn--disabled .home-filter__page-icon {
     color: #CCC;
 }
-
+.home-product {
+   margin-bottom: 10px;
+}
 .home-product-item {
+    display: block;
+    text-decoration: none;
     cursor: pointer;
     position: relative;
     background-color: var(--white-color);
     margin-top: 10px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    transition: transform linear 0.1s;
+    will-change: transform;
 }
-
+.home-product-item:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.05);
+}
 .home-product-item__img {
     padding-top: 100%;
     background-repeat: no-repeat;
@@ -1040,7 +1052,7 @@ header {
     line-height: 1.8rem;
     height: 3.6rem;
     overflow: hidden;
-    margin: 10px 10px 6px;
+    margin: 2px 10px 6px;
     display: block;
     display: -webkit-box;
     display: -moz-box;
