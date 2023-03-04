@@ -17,25 +17,30 @@
 <div class="app">
     <header>
         <%- include('layouts/navbar') %>
-        <%- include('layouts/userbutton') %>
     </header>
     <%- include('layouts/loginform') %>
     <%- include('layouts/registryform') %>
     <script src="javascript/modalBehavior.js"></script>
     <div class="app">
         <div class="app__header">
-
+            <% var appHeader; %>
+            <% if(appHeader !== undefined){ %>
+                <%- include(appHeader.toString()) %>
+            <% } %>
         </div>
         <div class="app__container">
             <div class="grid">
-                <% var page; %>
-                <% if(page !== undefined){ %>
-                    <%- include(page.toString()) %>
+                <% var appContainer; %>
+                <% if(appContainer !== undefined){ %>
+                    <%- include(appContainer.toString()) %>
                 <% } %>
             </div>
         </div>
         <div class="app__footer">
-
+            <% var appFooter; %>
+            <% if(appFooter !== undefined){ %>
+                <%- include(appFooter.toString()) %>
+            <% } %>
         </div>
     </div>
     <footer>
