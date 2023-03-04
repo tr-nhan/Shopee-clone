@@ -8,11 +8,17 @@ class SitesController {
     }
 
     public index(req: Request, res: Response) {
-        return res.status(200).render("index", {title: "Trang chủ", appContainer: "layouts/product-page"});
+        return res.status(200).render("index",
+          {
+              title: "Trang chủ",
+              appContainer: "layouts/product-page"
+          });
     }
 
     public search(req: Request, res: Response) {
-        return res.status(200).render("index", {title: "Tìm kiếm"});
+        return res.status(200).render("index", {
+            title: "Tìm kiếm"
+        });
     }
 
     public error(req: Request, res: Response) {
