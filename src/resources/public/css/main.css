@@ -1218,13 +1218,15 @@ footer {
     margin-top: -1px;
     margin-right: 8px;
 }
+
 .payment-method {
     width: 190px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.payment-method img{
+
+.payment-method img {
     width: 50px;
     height: 26px;
     padding: 3px 6px;
@@ -1232,6 +1234,7 @@ footer {
     border-radius: 4px;
     box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.1);
 }
+
 .footer__download {
     display: flex;
 }

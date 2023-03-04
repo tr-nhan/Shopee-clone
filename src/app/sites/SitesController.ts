@@ -8,7 +8,7 @@ class SitesController {
     }
 
     public index(req: Request, res: Response) {
-        return res.status(200).render("index", {title: "Trang chủ"});
+        return res.status(200).render("index", {title: "Trang chủ", page: "layouts/product-page"});
     }
 
     public search(req: Request, res: Response) {
