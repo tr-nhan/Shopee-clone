@@ -1,4 +1,4 @@
-import {DataTypes, InferAttributes, InferCreationAttributes, Model} from "sequelize";
+import { DataTypes, InferAttributes, InferCreationAttributes, Model } from "sequelize";
 import DatabaseConfig from "../helpers/DatabaseConfig.js";
 import User from "../user/User.js";
 
@@ -12,6 +12,16 @@ export default class Product extends Model<InferAttributes<Product>, InferCreati
     declare AMOUNT_LEFT: number;
     declare TAG: string;
     declare CREATE_BY: string;
+    declare NUMBER_OF_COMMENT: number;
+    declare RATING: number;
+    declare CREATE_DATE: number;
+
+    public convertToDateTime(): Date {
+        return (new Date(this.CREATE_DATE));
+    }
+    public convertToEpoch(args: string) {
+        this.CREATE_DATE = Date.parse(args);
+    }
 }
 Product.init({
     P_ID: {
@@ -46,5 +56,21 @@ Product.init({
             model: User,
             key: "USERNAME",
         }
+    },
+    NUMBER_OF_COMMENT: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0,
+    },
+    RATING: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0,
+        validate: {
+            max: 5,
+            min: 0,
+        }
+    },
+    CREATE_DATE: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0,
     }
-}, {sequelize: db, tableName: "PRODUCTS", timestamps: false})
+}, { sequelize: db, tableName: "PRODUCTS", timestamps: false });
