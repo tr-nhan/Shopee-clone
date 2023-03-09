@@ -15,6 +15,7 @@ export default class Product extends Model<InferAttributes<Product>, InferCreati
     declare NUMBER_OF_COMMENT: number;
     declare AVERAGE_RATING: number;
     declare CREATE_DATE: number;
+    declare DISCOUNT_RATE: number | null;
 
     public convertToDateTime(): Date {
         return (new Date(this.CREATE_DATE));
@@ -62,7 +63,7 @@ Product.init({
         defaultValue: 0,
     },
     AVERAGE_RATING: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.FLOAT,
         defaultValue: 0,
         validate: {
             max: 5,
@@ -72,5 +73,13 @@ Product.init({
     CREATE_DATE: {
         type: DataTypes.INTEGER,
         defaultValue: 0,
+    },
+    DISCOUNT_RATE: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0,
+        validate: {
+            max: 100,
+            min: 0,
+        }
     }
 }, { sequelize: db, tableName: "PRODUCTS", timestamps: false });
