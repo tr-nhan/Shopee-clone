@@ -151,3 +151,6 @@ dist
 # test
 test
 jest.config.js
+
+# local enviroment variables
+.env
