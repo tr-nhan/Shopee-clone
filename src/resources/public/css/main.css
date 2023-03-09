@@ -1053,11 +1053,14 @@ header {
     transform: translateY(-1px);
     box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.05);
 }
+.home-product-item-wrapper {
 
+}
 .home-product-item__img {
     padding-top: 100%;
     background-repeat: no-repeat;
     background-size: contain;
+    overflow: hidden;
     background-position: top center;
     border-top-right-radius: 2px;
     border-top-left-radius: 2px;
