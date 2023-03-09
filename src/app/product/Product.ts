@@ -13,7 +13,7 @@ export default class Product extends Model<InferAttributes<Product>, InferCreati
     declare TAG: string;
     declare CREATE_BY: string;
     declare NUMBER_OF_COMMENT: number;
-    declare RATING: number;
+    declare AVERAGE_RATING: number;
     declare CREATE_DATE: number;
 
     public convertToDateTime(): Date {
@@ -61,7 +61,7 @@ Product.init({
         type: DataTypes.INTEGER,
         defaultValue: 0,
     },
-    RATING: {
+    AVERAGE_RATING: {
         type: DataTypes.INTEGER,
         defaultValue: 0,
         validate: {
