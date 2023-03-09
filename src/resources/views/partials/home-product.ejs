@@ -21,9 +21,9 @@
                         </span>
                         </div>
                         <div class="home-product-item__labels">
-                        <span class="home-product-item__sale-off-percent">
-                            <%- (item.DISCOUNT_RATE !== 0) ? item.DISCOUNT_RATE + "%" : null %>
-                        </span>
+                            <% if(item.DISCOUNT_RATE !== 0){ %>
+                                <span class="home-product-item__sale-off-percent"><%- item.DISCOUNT_RATE + "%" %></span>
+                            <% } %>
                             <span class="home-product-item__shop-label">#ShopDacBiet</span>
                         </div>
                         <div class="home-product-item__add-to-cart">

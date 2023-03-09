@@ -1185,7 +1185,17 @@ header {
     margin-top: 50px;
     margin-bottom: 30px;
 }
-
+.home-product-item__sale-off-percent{
+    color: var(--white-color);
+    background-color: #f69113;
+    border-left: 2px dotted;
+    border-right: 2px dotted;
+}
+.home-product-item__shop-label {
+    color: red;
+    background-color: var(--white-color);
+    border: 1px solid red;
+}
 footer {
     padding-top: 16px;
     border-top: 4px solid var(--primary-color);
