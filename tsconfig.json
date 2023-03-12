@@ -26,6 +26,8 @@
     /* Enable error reporting for codepaths that do not explicitly return in a function. */
     "removeComments": true,
     /* Disable emitting comments. */
+    "noImplicitAny": true,
+    /* Enable error reporting for expressions and declarations with an implied 'any' type. */
   },
   "include": [
     "./src/app/**/*"
